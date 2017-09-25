@@ -17,6 +17,8 @@ public class ComparatorDemo {
         addresses.add(new Address("43 High St.", "Columbus", "OH", "43034"));
         addresses.add(new Address("678 Leon Rd.", "Tallahassee", "FL", "32307"));
         addresses.add(new Address("8 Deep Sea Way", "Boca Raton", "FL", "33433"));
+        addresses.add(new Address("208 Short Street", "Chapel Hill", "NC", "27516"));
+        addresses.add(new Address("3050 College Avenue", "Berkeley", "CA", "94705"));
 
         //Feel free to add in more addresses if you would like
 
@@ -36,7 +38,7 @@ public class ComparatorDemo {
         print(addresses);
 
         // !! - Write a lambda to sort by city alphabetically
-      //  Collections.sort(addresses, /* lambda here */);
+        Collections.sort(addresses, (o1, o2) -> o1.getCity().compareTo(o2.getCity()));
 
         System.out.println("\nAfter sorting by city");
         print(addresses);
